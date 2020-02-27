@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link id="style" rel="stylesheet" type="text/css" href="./style/style.css"/>
+    <script type="text/javascript" src="./script/mainPage.js"></script>
+</head>
+<body onload="initPage()">
+    <header>
+        <ul id="menu"></ul>
+    </header>
+    <p id="error"></p>
+
+    <div class="rTable" id="sectionBlock">
+        <form id="form_tasks" name="form_tasks" action="" method="POST" onsubmit="return false">
+            <input type="hidden" name="pressed_button" />
+            <!--table-->
+            <div id="tasks">
+                <div class="rTableRow">
+                    <div class="rTableCell">
+                    </div>
+                    <div class="rTableCell">
+                        Task
+                    </div>
+                    <div class="rTableCell">
+                        Date
+                    </div>
+                    <div class="rTableCell">
+                        Actions
+                    </div>
+                    <div class="rTableCell">
+                        File
+                    </div>
+                </div>
+            </div>
+
+            <!--buttons-->
+            <div id="buttons"></div>
+        </form>
+        <form id="form_add" name="form_add"  method="POST" onsubmit="return false">
+            <input type="hidden" name="action" id="actionAdd"/>
+        </form>
+    </div>
+
+    <footer>
+        <a href="mailto:imekov.nikita@gmail.com">Imekov 'DraikoN' Nikita did it.</a>
+    </footer>
+</body>
+</html>

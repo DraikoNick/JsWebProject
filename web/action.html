@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add/Change Task</title>
+    <link id="style" rel="stylesheet" type="text/css" href="./style/style.css"/>
+    <script type="text/javascript" src="./script/actionPage.js"></script>
+</head>
+<body onload="initPage()">
+    <header>
+        <ul id="menu"></ul>
+    </header>
+
+
+        <div class="rTable">
+            <form id="form_change" name="form_change" action="" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="pressed_button" />
+                <!--table-->
+            <div id="tasks">
+                    <div class="rTableRow">
+                        <div class="rTableCell">
+                            Task
+                        </div>
+                        <div class="rTableCell">
+                            Date
+                        </div>
+                        <div class="rTableCell" id="cellStatus">
+                            Status
+                        </div>
+                        <!--<div class="rTableCell">
+                            File
+                        </div>
+                        <div class="rTableCell">
+                        </div>-->
+                    </div>
+            </div>
+
+            <div id="taskToChange"></div>
+            <div id="taskToAdd">
+                <div class="rTableRow">
+                    <div class="rTableCell">
+                        <input type="text" id="taskName" name="taskName" value=""/>
+                    </div>
+                    <div class="rTableCell">
+                        <input type="date" id="taskDate" name="taskDate">
+                    </div>
+                    <div class="rTableCell">
+                        <input type="file" name="fileName"/> Choose file for upload:
+                    </div>
+                    <div class="rTableCell">
+                        <input type="button" id="create" name="savebtn"
+                               onclick="confirmAdding(this.value)" value="Add"/>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+
+
+    <footer>
+    <a href="mailto:imekov.nikita@gmail.com">Imekov 'DraikoN' Nikita did it.</a>
+    </footer>
+</body>
+</html>

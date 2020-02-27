@@ -1,0 +1,23 @@
+CREATE DATABASE `web` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+CREATE TABLE `tasks` (
+  `tasks_id` int(11) NOT NULL AUTO_INCREMENT,
+  `tasks_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `tasks_date` date NOT NULL,
+  `tasks_status` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `filename` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`tasks_id`),
+  KEY `user_id_idx` (`user_id`),
+  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `user_password` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `user_email` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `user_id_UNIQUE` (`user_id`),
+  UNIQUE KEY `user_name_UNIQUE` (`user_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>WebProject</title>
+    <link id="style" rel="stylesheet" type="text/css" href="./style/style.css"/>
+    <script type="text/javascript" src="./script/indexPage.js"></script>
+  </head>
+
+  <body onload="initPage()">
+    <header>
+      <ul id="menu"></ul>
+    </header>
+
+    <div id="index-form">
+      <p>Some information about JS web project...</p>
+    </div>
+
+    <div id="login-form">
+      <form action="login" name="loginform" method="post" onsubmit="return false">
+        <p>Username:</p> <input type="text" name="username" autocomplete="username">
+        <p>Password:</p> <input type="password" name="password" autocomplete="current-password">
+        <p><input type="submit" name="login" value="Log In" onclick="return doLogin()"></p>
+        <p id="error"></p>
+      </form>
+    </div>
+
+    <div id="regin-form">
+      <form action="regin" name="regform" method="post" onsubmit="return false">
+        <p>Username:</p> <input type="text" name="username">
+        <p>Password:</p> <input type="password" name="password">
+        <p>EMail:</p> <input type="text" name="email">
+        <p><input type="submit" name="reg" value="Register" onclick="return doRegistration()"></p>
+        <p id="error"></p>
+      </form>
+    </div>
+
+    <footer>
+      <a href="mailto:imekov.nikita@gmail.com">Imekov 'DraikoN' Nikita did it.</a>
+    </footer>
+
+  </body>
+
+</html>
